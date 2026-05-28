@@ -1,0 +1,17 @@
+.short-box-container {
+    display: flex;
+    flex-direction: row;
+    column-gap: 5px;
+    flex-flow: wrap;
+    row-gap: 5px;
+}
+
+.short-box-container>button {
+    cursor: pointer;
+    width: 85px;
+    height: 62px;
+    background: 0;
+    border: 0;
+    border-radius: 10px;
+    background-color: floralwhite;
+}

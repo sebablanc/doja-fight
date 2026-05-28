@@ -1,0 +1,13 @@
+.app-title {
+    margin: 0 0 5px 0;
+    background-color: lightslategray;
+    padding: 20px;
+    color: pink;
+    text-align: left;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5vh;
+}

@@ -1,0 +1,10 @@
+.bottom-section {
+    width: 600px;
+    margin: 0 auto;
+}
+
+@media only screen and (max-width: 667px) {
+    .bottom-section {
+        width: 100vw;
+    }
+}
