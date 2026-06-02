@@ -1,7 +1,8 @@
 import { useCallback, useRef, useState } from "react";
-import { Circle, Group, Image, Transformer } from "react-konva";
+import { Group, Image, Transformer } from "react-konva";
 import useImage from "use-image";
 import type ElementProps from "../../core/interfaces/elements-props";
+import ElementsCloseButton from "../elements-close-button/elements-close-button";
 
 function FileteadoElement({ onDelete }: ElementProps) {
     const [image] = useImage('/fileteado.svg', "anonymous");
@@ -50,17 +51,15 @@ function FileteadoElement({ onDelete }: ElementProps) {
             y={yPosition}
             draggable
             onDragEnd={dragEndHandler}>
-            <Circle
+            <ElementsCloseButton
                 width={20}
                 height={20}
                 x={circleXPosition}
                 y={-20}
-                fill={'red'}
                 visible={showDeleteButton}
                 onClick={eliminar}
-                onTap={eliminar} />
+            />
             <Image image={image}
-
                 width={270}
                 height={152}
                 ref={imageRef}

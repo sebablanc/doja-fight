@@ -4,9 +4,8 @@ import './share-button.css';
 function ShareButton({ onClick }: ElementProps) {
 
     return (
-        <button className="share-button" onClick={onClick}>
-            <img src="/share.svg" alt="" />
-            <p>Compartime tu diseño!</p>
+        <button className="common-button share-button" onClick={onClick}>
+            <img src="/share.svg" alt="compartir diseño" />
         </button>
     )
 }

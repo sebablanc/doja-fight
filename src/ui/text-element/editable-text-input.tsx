@@ -38,7 +38,7 @@ export function EditableTextInput({
             {isOpen && (
                 <div className="modal-overlay">
                     <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-                        <button className="editable-text-button close-text-button" onClick={() => onClose(oldText)}>X</button>
+                        <button className="common-button close-button" onClick={() => onClose(oldText)}>X</button>
                         <input
                             id="text-form"
                             className="text-input"
@@ -49,7 +49,7 @@ export function EditableTextInput({
                             onKeyDown={onKeyDownHandler}
                             onSubmit={onKeyDownHandler}
                         />
-                        <button className="editable-text-button change-text-button" onClick={() => onClose(text)}>Cambiar texto</button>
+                        <button className="common-button change-text-button" onClick={() => onClose(text)}>Cambiar texto</button>
                     </div>
                 </div>
             )}

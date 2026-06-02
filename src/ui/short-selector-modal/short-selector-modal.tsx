@@ -1,0 +1,54 @@
+import { useContext, type MouseEventHandler } from "react";
+import "./short-selector-modal.css";
+import { ShortDispatchContext } from "../../core/short/short-context";
+import CloseButton from "../close-button/close-button";
+
+function ShortSelectorModal({ isOpen = false, onClose = (): MouseEventHandler<HTMLButtonElement> | void => { } }) {
+    const dispatch = useContext(ShortDispatchContext);
+
+    function handleClick(element: string) {
+        if (dispatch) {
+            dispatch(element);
+        }
+    }
+
+
+    return (
+        <div className="short-selector-modal-overlay">
+            {isOpen && (
+                <div className="short-selector-modal-content">
+                    <div className="short-selector-modal-title">
+                        <h2>Elegí tu pantalón</h2>
+                        <CloseButton onClose={onClose} />
+                    </div>
+                    <hr />
+                    <div className="short-box-container">
+
+                        <button onClick={() => handleClick('short_1_liso.svg')}>
+                            <img src="/short_1_liso.svg" alt="" />
+                        </button>
+                        <button onClick={() => handleClick('short_2.svg')}>
+                            <img src="/short_2.svg" alt="" />
+                        </button>
+                        <button onClick={() => handleClick('short_3.svg')}>
+                            <img src="/short_3.svg" alt="" />
+                        </button>
+                        <button onClick={() => handleClick('short_4.svg')}>
+                            <img src="/short_4.svg" alt="" />
+                        </button>
+                        <button onClick={() => handleClick('short_5.svg')}>
+                            <img src="/short_5.svg" alt="" />
+                        </button>
+                        <button onClick={() => handleClick('short_6.svg')}>
+                            <img src="/short_6.svg" alt="" />
+                        </button>
+                        <button onClick={() => handleClick('short_7.svg')}>
+                            <img src="/short_7.svg" alt="" />
+                        </button>
+                    </div>
+                </div>
+            )}
+        </div>);
+}
+
+export default ShortSelectorModal;

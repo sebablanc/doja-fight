@@ -31,7 +31,7 @@ function SelectorTalle() {
                 <select id='selector_talles' onChange={handleSelectChange}>
                     {TALLES.map(talle => <option key={`talle_${talle.value}`} value={talle.value}>{talle.label}</option>)}
                 </select>
-                <a onClick={() => setOpenModal(true)}>tabla de talles</a>
+                <a className='common-button' onClick={() => setOpenModal(true)}>tabla de talles</a>
             </section>
         </>
     )

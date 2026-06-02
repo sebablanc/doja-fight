@@ -3,12 +3,12 @@ import './App.css'
 import Lienzo from './componentes/lienzo/lienzo'
 import { ElementsContext, ElementsDispatchContext } from './core/layers/elements-context'
 import { ShortContext, ShortDispatchContext } from './core/short/short-context'
-import ElementsButtonBox from './ui/element-button-box/element-button-box'
-import ShortButtonBox from './ui/short-button-box/short-button-box'
 import shortReducer from './core/short/short-reducer'
 import elementsReducer from './core/layers/elements-reducer'
 import { TalleContext, TalleDispatchContext } from './core/talle/talle-context'
 import talleReducer from './core/talle/talle-reducer'
+import ShortButton from './ui/short-button/short-button'
+import ElementsButton from './ui/elements-button/elements-button'
 
 function App() {
   const [elements, dispatch] = useReducer(elementsReducer, []);
@@ -24,10 +24,8 @@ function App() {
                 <h1 className='app-title'>Creá tu short</h1>
                 <div className="app-container">
                   <section className="top-section">
-                    <ShortButtonBox />
-                  </section>
-                  <section className="middle-section">
-                    <ElementsButtonBox />
+                    <ShortButton />
+                    <ElementsButton />
                   </section>
                   <Lienzo />
                 </div>

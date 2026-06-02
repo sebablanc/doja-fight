@@ -35,8 +35,6 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --text: #9ca3af;
-    --text-h: #f3f4f6;
     background-image: url(./../public/fondo.png);
     background-repeat: no-repeat;
     background-size: cover;

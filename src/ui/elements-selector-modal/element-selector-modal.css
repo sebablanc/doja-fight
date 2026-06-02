@@ -1,0 +1,53 @@
+.elements-selector-modal-overlay {
+    position: absolute;
+    translate: 0 50px;
+    z-index: 1;
+}
+
+.elements-selector-modal-content {
+    display: flex;
+    flex-direction: column;
+    margin: 0 10px;
+    background: white;
+    padding: 10px;
+    box-shadow: 1px 1px 1px 1px gray;
+    row-gap: 5px;
+}
+
+.elements-selector-modal-content>hr {
+    color: black;
+    width: 100%;
+}
+
+.elements-selector-modal-title {
+    display: flex;
+}
+
+.elements-selector-modal-title > h2 {
+    text-align: center;
+    width: 100%;
+    margin: 0;
+}
+.button-box-container {
+    display: flex;
+    flex-direction: row;
+    column-gap: 5px;
+    flex-flow: wrap;
+    row-gap: 5px;
+}
+
+.button-box-container>button {
+    cursor: pointer;
+    width: 85px;
+    height: 46px;
+    background: 0;
+    border: 0;
+    border-radius: 10px;
+    background-color: floralwhite;
+}
+
+@media (prefers-color-scheme: dark) {
+    .button-box-container>button {
+        color: black;
+    }
+}

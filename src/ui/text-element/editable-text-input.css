@@ -21,20 +21,6 @@
     margin-bottom: 5px;
 }
 
-.editable-text-button {
-    padding: 5px;
-    border: none;
-    color: greenyellow;
-    background-color: green;
-    cursor: pointer;
-    width: max-content;
-    border-radius: 5px;
-}
-
-.close-text-button {
-    align-self: flex-end;
-}
-
 .change-text-button {
     align-self: center;
 }

@@ -1,7 +1,8 @@
 import { useCallback, useRef, useState } from "react";
-import { Circle, Group, Text, Transformer } from "react-konva";
+import { Group, Text, Transformer } from "react-konva";
 import { EditableTextInput } from "./editable-text-input";
 import type ElementProps from "../../core/interfaces/elements-props";
+import ElementsCloseButton from "../elements-close-button/elements-close-button";
 
 const RETURN_KEY = 13;
 const ESCAPE_KEY = 27;
@@ -12,7 +13,7 @@ function TextElement({ textSended = "Doja fight", x = 10, y = 10, draggable = tr
     const [showDeleteButton, setShowDeleteButton] = useState(false);
     const [xPosition, setXPosition] = useState(x);
     const [yPosition, setYPosition] = useState(y);
-    const [circleXPosition, setCircleXPosition] = useState(150);
+    const [circleXPosition, setCircleXPosition] = useState(125);
     const textRef = useRef<any>(null);
     const trRef = useRef<any>(null);
 
@@ -79,15 +80,14 @@ function TextElement({ textSended = "Doja fight", x = 10, y = 10, draggable = tr
                 y={yPosition}
                 draggable={draggable}
                 onDragEnd={dragEndHandler}>
-                <Circle
+                <ElementsCloseButton
                     width={20}
                     height={20}
                     x={circleXPosition}
-                    y={-20}
-                    fill={'red'}
+                    y={-30}
                     visible={showDeleteButton}
                     onClick={eliminar}
-                    onTap={eliminar} />
+                />
                 <Text
                     text={text}
                     fontSize={30}
