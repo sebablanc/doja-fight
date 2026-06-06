@@ -13,7 +13,7 @@ import TextButton from './ui/text-button/text-button'
 
 function App() {
   const [elements, dispatch] = useReducer(elementsReducer, []);
-  const [short, shortDispatch] = useReducer(shortReducer, 'short_1_liso.svg');
+  const [short, shortDispatch] = useReducer(shortReducer, 'short_1_completo.svg');
   const [talle, talleDispatch] = useReducer(talleReducer, 'S');
   return (
     <ElementsContext.Provider value={elements}>

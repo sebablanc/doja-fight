@@ -8,7 +8,7 @@ import ShareButton from "../../ui/share-button/share-button";
 import SelectorTalle from "../../ui/selector-talle/selector-talle";
 
 const STAGE_WIDTH = window.innerWidth < 501 ? window.innerWidth : 650;
-const STAGE_HEIGHT = 320;
+const STAGE_HEIGHT = 720;
 
 async function share(uri: string) {
     const response = await fetch(uri);
@@ -59,8 +59,8 @@ function Lienzo() {
                         <BackgroundImage
                             src={short}
                             x={Math.floor(STAGE_WIDTH / 100) < 2 ? 0 : Math.floor(STAGE_WIDTH / 20)}
-                            width={STAGE_WIDTH > 500 ? 500 : 350}
-                            height={STAGE_WIDTH > 500 ? STAGE_HEIGHT - 50 : 300}
+                            width={STAGE_WIDTH > 500 ? 500 : 380}
+                            height={STAGE_WIDTH > 500 ? STAGE_HEIGHT - 50 : 700}
                         />
                         {elements && elements.map((Element: any) => (
                             <Element key={Element.id} onDelete={() => eliminar(Element)} onChange={() => cambiar(Element)} />

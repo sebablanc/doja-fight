@@ -24,26 +24,26 @@ function ShortSelectorModal({ isOpen = false, onClose = (): MouseEventHandler<HT
                     <hr />
                     <div className="short-box-container">
 
-                        <button onClick={() => handleClick('short_1_liso.svg')}>
-                            <img src="/short_1_liso.svg" alt="" />
+                        <button onClick={() => handleClick('short_1_completo.svg')}>
+                            <img src="/short_1_adelante.svg" alt="" />
                         </button>
-                        <button onClick={() => handleClick('short_2.svg')}>
-                            <img src="/short_2.svg" alt="" />
+                        <button onClick={() => handleClick('short_2_completo.svg')}>
+                            <img src="/short_2_adelante.svg" alt="" />
                         </button>
-                        <button onClick={() => handleClick('short_3.svg')}>
-                            <img src="/short_3.svg" alt="" />
+                        <button onClick={() => handleClick('short_3_completo.svg')}>
+                            <img src="/short_3_adelante.svg" alt="" />
                         </button>
-                        <button onClick={() => handleClick('short_4.svg')}>
-                            <img src="/short_4.svg" alt="" />
+                        <button onClick={() => handleClick('short_4_completo.svg')}>
+                            <img src="/short_4_adelante.svg" alt="" />
                         </button>
-                        <button onClick={() => handleClick('short_5.svg')}>
-                            <img src="/short_5.svg" alt="" />
+                        <button onClick={() => handleClick('short_5_completo.svg')}>
+                            <img src="/short_5_adelante.svg" alt="" />
                         </button>
-                        <button onClick={() => handleClick('short_6.svg')}>
-                            <img src="/short_6.svg" alt="" />
+                        <button onClick={() => handleClick('short_6_completo.svg')}>
+                            <img src="/short_6_adelante.svg" alt="" />
                         </button>
-                        <button onClick={() => handleClick('short_7.svg')}>
-                            <img src="/short_7.svg" alt="" />
+                        <button onClick={() => handleClick('short_7_completo.svg')}>
+                            <img src="/short_7_adelante.svg" alt="" />
                         </button>
                     </div>
                 </div>
