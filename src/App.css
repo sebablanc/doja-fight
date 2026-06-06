@@ -1,38 +1,53 @@
 .app-title {
-    margin: 0 0 5px 0;
-    background-color: lightslategray;
+    background-color: #18455d;
     padding: 20px;
-    color: pink;
     text-align: left;
+}
+.app-title > h1 {
+    color: pink;
+    margin: 0 0 10px 0;
+    font-family: 'monster_chiller';
+}
+
+.app-title > h2 {
+    color: pink;
+    margin: 10px 0 0 0;
+    font-family: 'monster_chiller';
 }
 
 .app-container {
+    background-image: url(./../public/fondo.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    row-gap: 5vh;
+    row-gap: 20px;
 }
 
 .top-section {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0 10px;
+    margin: 5px 10px;
 }
 
 .common-button {
     padding: 5px;
     border: none;
-    color: greenyellow;
-    background-color: green;
-    box-shadow: 1px 1px 1px greenyellow;
+    color: #f1f1f1;
+    box-shadow: 1px 1px 1px #9d648d;
     cursor: pointer;
     width: max-content;
     border-radius: 5px;
     font-size: 15px;
+    background-color: #9d648d;
 }
 
 .common-button:active {
-    box-shadow: 0px 0px 0px greenyellow;
+    box-shadow: 0px 0px 0px #9d648d;
 }
 
 .close-button {

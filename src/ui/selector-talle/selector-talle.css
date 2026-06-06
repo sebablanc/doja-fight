@@ -1,3 +1,11 @@
+.tabla-talle-button{
+    position: absolute;
+    top: 6vh;
+    right: 10px;
+    font-family: 'monster_chiller';
+    font-size: 20px;
+}
+
 .selector-talle-container {
     display: flex;
     padding: 0 10px;

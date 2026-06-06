@@ -1,17 +1,20 @@
-.short-button {
+.text-button {
+    color: #000;
     background-color: white;
+    font-family: 'monster_chiller';
     border: none;
     border-radius: 5px;
     box-shadow: 3px 3px 3px gray;
     width: 112px;
     height: 100px;
+    font-size: 35px;
 }
 
-.short-button:active {
+.text-button:active {
     box-shadow: 1px 1px 1px gray;
 }
 
-.short-button-img {
+.text-button-img {
     width: 100px;
     height: 100px;
 }

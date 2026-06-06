@@ -9,6 +9,7 @@ import { TalleContext, TalleDispatchContext } from './core/talle/talle-context'
 import talleReducer from './core/talle/talle-reducer'
 import ShortButton from './ui/short-button/short-button'
 import ElementsButton from './ui/elements-button/elements-button'
+import TextButton from './ui/text-button/text-button'
 
 function App() {
   const [elements, dispatch] = useReducer(elementsReducer, []);
@@ -21,10 +22,14 @@ function App() {
           <ShortDispatchContext.Provider value={shortDispatch}>
             <TalleContext.Provider value={talle}>
               <TalleDispatchContext.Provider value={talleDispatch}>
-                <h1 className='app-title'>Creá tu short</h1>
+                <div className='app-title'>
+                  <h1>Doja Fight</h1>
+                  <h2>Crea tu short</h2>
+                </div>
                 <div className="app-container">
                   <section className="top-section">
                     <ShortButton />
+                    <TextButton />
                     <ElementsButton />
                   </section>
                   <Lienzo />

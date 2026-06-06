@@ -10,17 +10,28 @@
     flex-direction: column;
     margin: 0 auto;
     background: white;
-    width: 50vw;
+    width: 80vw;
     padding: 10px;
     box-shadow: 1px 1px 1px 1px gray;
     row-gap: 10px;
 }
 
+.modal-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .text-input {
     border: 1px solid gray;
+    font-size: 25px;
     margin-bottom: 5px;
 }
 
 .change-text-button {
     align-self: center;
+}
+
+.modal-content>select {
+    font-size: 25px;
 }

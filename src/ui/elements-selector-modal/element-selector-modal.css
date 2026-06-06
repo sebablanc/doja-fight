@@ -43,7 +43,7 @@
     background: 0;
     border: 0;
     border-radius: 10px;
-    background-color: floralwhite;
+    background-color: white;
 }
 
 @media (prefers-color-scheme: dark) {

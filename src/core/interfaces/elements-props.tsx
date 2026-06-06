@@ -5,6 +5,7 @@ export default interface ElementProps {
     onChange?: Function;
     onClick?: MouseEventHandler<HTMLButtonElement> | undefined;
     textSended?: string;
+    fontFamilySelected?: string;
     x?: number;
     y?: number;
     draggable: boolean;

@@ -6,19 +6,17 @@ import BackgroundImage from "../../ui/background/background";
 import { ShortContext } from "../../core/short/short-context";
 import ShareButton from "../../ui/share-button/share-button";
 import SelectorTalle from "../../ui/selector-talle/selector-talle";
-import { TalleContext } from "../../core/talle/talle-context";
 
 const STAGE_WIDTH = window.innerWidth < 501 ? window.innerWidth : 650;
-const STAGE_HEIGHT = 400;
+const STAGE_HEIGHT = 320;
 
-async function share(uri: string, talle: string) {
+async function share(uri: string) {
     const response = await fetch(uri);
     const blob = await response.blob();
-    const file = new File([blob], "konva-image.png", { type: "image/png" });
+    const file = new File([blob], "adelante-image.png", { type: "image/png" });
     const dataToShare = {
         files: [file],
-        title: 'Canvas Image',
-        text: `Hola lo quiero en ${talle}`
+        title: 'Canvas Image'
     };
 
     if (navigator.share) {
@@ -29,10 +27,9 @@ async function share(uri: string, talle: string) {
 function Lienzo() {
     const elements = useContext(ElementsContext);
     const short = useContext(ShortContext);
-    const talle = useContext(TalleContext);
     const dispatch = useContext(ElementsDispatchContext);
     const stageRef = React.useRef<any>(null);
-    const handleExport = () => share(stageRef.current?.toDataURL(), talle);
+    const handleExport = () => share(stageRef.current?.toDataURL());
 
     const eliminar = (element: any) => {
         if (dispatch) {

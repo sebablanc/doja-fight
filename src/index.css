@@ -1,3 +1,43 @@
+@font-face {
+    font-family: 'ancient';
+    src: url('./assets/ancient/Ancient_Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'jersey_m54';
+    src: url('./assets/jersey/Jersey_M54.ttf') format('truetype');
+}  
+
+@font-face {
+    font-family: 'metrim';
+    src: url('./assets/metrim/metrim_letter_regular.ttf') format('truetype');
+}  
+
+@font-face {
+    font-family: 'monster_chiller';
+    src: url('./assets/monster_chiller/monster_chiller.ttf') format('truetype');
+}  
+
+@font-face {
+    font-family: 'soccer_league';
+    src: url('./assets/soccer_league/soccer_league.ttf') format('truetype');
+}  
+
+@font-face {
+    font-family: 'soccer_league_college';
+    src: url('./assets/soccer_league_college/soccer_league_college.ttf') format('truetype');
+}  
+
+@font-face {
+    font-family: 'splatink_2';
+    src: url('./assets/splatink_2/splatink_2.otf') format('truetype');
+}  
+
+@font-face {
+    font-family: 'untinkers';
+    src: url('./assets/untinkers/unthinkers.otf') format('truetype');
+}  
+
 :root {
   --text: #6b6375;
   --text-h: #08060d;
@@ -19,10 +59,6 @@
   letter-spacing: 0.18px;
   color-scheme: light dark;
   color: var(--text);
-  background-image: url(./../public/fondo.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -35,10 +71,6 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    background-image: url(./../public/fondo.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
     --border: #2e303a;
     --code-bg: #1f2028;
     --accent: #c084fc;
@@ -55,8 +87,6 @@
 }
 
 #root {
-  /*width: 1126px;
-  max-width: 100%;*/
   margin: 0 auto;
   text-align: center;
   border-inline: 1px solid var(--border);
@@ -116,4 +146,36 @@ code {
   line-height: 135%;
   padding: 4px 8px;
   background: var(--code-bg);
+}
+
+.ancient {
+  font-family: 'ancient';
+}
+
+.jersey_m54 {
+  font-family: 'jersey_m54';
+}
+
+.metrim {
+  font-family: 'metrim';
+}
+
+.monster_chiller {
+  font-family: 'monster_chiller';
+}
+
+.soccer_league {
+  font-family: 'soccer_league';
+}
+
+.soccer_league_college {
+  font-family: 'soccer_league_college';
+}
+
+.splatink_2 {
+  font-family: 'splatink_2';
+}
+
+.untinkers {
+  font-family: 'untinkers';
 }

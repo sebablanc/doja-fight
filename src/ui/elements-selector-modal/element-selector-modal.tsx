@@ -1,5 +1,4 @@
 import "./element-selector-modal.css";
-import TextElement from "../text-element/text-element";
 import FileteadoElement from "../fileteado-element/fileteado-element";
 import FlecosElement from "../flecos-element/flecos-element";
 import MoniosElement from "../monios-element/monios-element";
@@ -36,7 +35,6 @@ function ElementsSelectorModal({ isOpen = false, onClose = (): MouseEventHandler
                     </div>
                     <hr />
                     <div className="button-box-container">
-                        <button onClick={() => handleClick(TextElement)}>texto</button>
                         <button onClick={() => handleClick(FileteadoElement)}>
                             <img src="/fileteado.svg" alt="" />
                         </button>

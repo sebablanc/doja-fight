@@ -11,13 +11,13 @@ function ElementsCloseButton({ width = 0, height=0 , x = 0, y=0, visible = true,
             visible={visible}
             onClick={onClick}
             onTap={onClick}>
-            <Tag fill="green" cornerRadius={5} />
+            <Tag fill="#9d648d" cornerRadius={5} />
             <Text
                 text="X"
                 fontFamily="Calibri"
                 fontSize={15}
                 padding={5}
-                fill="greenyellow"
+                fill="#f1f1f1"
             />
         </Label>
     );

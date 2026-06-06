@@ -7,12 +7,13 @@ import ElementsCloseButton from "../elements-close-button/elements-close-button"
 const RETURN_KEY = 13;
 const ESCAPE_KEY = 27;
 
-function TextElement({ textSended = "Doja fight", x = 10, y = 10, draggable = true, onDelete }: ElementProps) {
+function TextElement({ textSended = "Doja fight", fontFamilySelected = 'ancient', x = 0, y = 0, draggable = true, onDelete }: ElementProps) {
     const [text, setText] = useState(textSended);
+    const [fontFamily, setFontFamily] = useState(fontFamilySelected);
     const [isEditing, setIsEditing] = useState(false);
     const [showDeleteButton, setShowDeleteButton] = useState(false);
-    const [xPosition, setXPosition] = useState(x);
-    const [yPosition, setYPosition] = useState(y);
+    const [xPosition, setXPosition] = useState(x || window.innerWidth / 4 + 20);
+    const [yPosition, setYPosition] = useState(y || window.outerHeight / 8);
     const [circleXPosition, setCircleXPosition] = useState(125);
     const textRef = useRef<any>(null);
     const trRef = useRef<any>(null);
@@ -48,8 +49,9 @@ function TextElement({ textSended = "Doja fight", x = 10, y = 10, draggable = tr
         setIsEditing(true);
     }, []);
 
-    const handleTextClose = useCallback((newText: any) => {
+    const handleTextClose = useCallback((newText: any, newFontFamily: any) => {
         setText(newText);
+        setFontFamily(newFontFamily);
         setIsEditing(false)
     }, []);
 
@@ -68,6 +70,7 @@ function TextElement({ textSended = "Doja fight", x = 10, y = 10, draggable = tr
                 width={500}
                 height={0}
                 value={text}
+                fontFamilySended={fontFamily}
                 isOpen={isEditing}
                 onClose={handleTextClose}
                 onKeyDown={handleEscapeKeys}
@@ -91,7 +94,7 @@ function TextElement({ textSended = "Doja fight", x = 10, y = 10, draggable = tr
                 <Text
                     text={text}
                     fontSize={30}
-                    fontFamily="Calibri"
+                    fontFamily={fontFamily}
                     fill="black"
                     ref={textRef}
                     onDblClick={handleTextDblClick}
