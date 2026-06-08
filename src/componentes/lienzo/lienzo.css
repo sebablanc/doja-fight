@@ -1,10 +1,11 @@
 .bottom-section {
     width: 600px;
-    margin: 0 auto;
+    margin: 0 20px;
 }
 
 @media only screen and (max-width: 667px) {
     .bottom-section {
-        width: 100vw;
+        width: 350px;
+        min-height: 700px;
     }
 }

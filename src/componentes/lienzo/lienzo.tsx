@@ -7,8 +7,8 @@ import { ShortContext } from "../../core/short/short-context";
 import ShareButton from "../../ui/share-button/share-button";
 import SelectorTalle from "../../ui/selector-talle/selector-talle";
 
-const STAGE_WIDTH = window.innerWidth < 501 ? window.innerWidth : 650;
-const STAGE_HEIGHT = 720;
+const STAGE_WIDTH = window.innerWidth < 501 ? 350 : 650;
+const STAGE_HEIGHT = 580;
 
 async function share(uri: string) {
     const response = await fetch(uri);
@@ -58,9 +58,10 @@ function Lienzo() {
                     <Layer>
                         <BackgroundImage
                             src={short}
-                            x={Math.floor(STAGE_WIDTH / 100) < 2 ? 0 : Math.floor(STAGE_WIDTH / 20)}
-                            width={STAGE_WIDTH > 500 ? 500 : 380}
-                            height={STAGE_WIDTH > 500 ? STAGE_HEIGHT - 50 : 700}
+                            // x={Math.floor(STAGE_WIDTH / 100) < 2 ? 0 : Math.floor(STAGE_WIDTH / 20)}
+                            x={10}
+                            width={STAGE_WIDTH > 500 ? 500 : 320}
+                            height={STAGE_WIDTH > 500 ? STAGE_HEIGHT - 50 : 580}
                         />
                         {elements && elements.map((Element: any) => (
                             <Element key={Element.id} onDelete={() => eliminar(Element)} onChange={() => cambiar(Element)} />
