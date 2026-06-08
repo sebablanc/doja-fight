@@ -8,7 +8,15 @@ import { useContext, type MouseEventHandler } from "react";
 import { ElementsDispatchContext } from "../../core/layers/elements-context";
 import CloseButton from "../close-button/close-button";
 
-function ElementsSelectorModal({ isOpen = false, onClose = (): MouseEventHandler<HTMLButtonElement> | void => {} }) {
+const elements = [
+    { thumbnail: '/fileteado.svg', value: FileteadoElement },
+    { thumbnail: '/flecos.svg', value: FlecosElement },
+    { thumbnail: '/moños.svg', value: MoniosElement },
+    { thumbnail: '/tribal_1.svg', value: TribalOneElement },
+    { thumbnail: '/tribal_2.svg', value: TribalTwoElement }
+]
+
+function ElementsSelectorModal({ isOpen = false, onClose = (): MouseEventHandler<HTMLButtonElement> | void => { } }) {
     const dispatch = useContext(ElementsDispatchContext);
 
     function handleClick(ComponentElement: any) {
@@ -35,21 +43,11 @@ function ElementsSelectorModal({ isOpen = false, onClose = (): MouseEventHandler
                     </div>
                     <hr />
                     <div className="button-box-container">
-                        <button onClick={() => handleClick(FileteadoElement)}>
-                            <img src="/fileteado.svg" alt="" />
-                        </button>
-                        <button onClick={() => handleClick(FlecosElement)}>
-                            <img src="/flecos.svg" alt="" />
-                        </button>
-                        <button onClick={() => handleClick(MoniosElement)}>
-                            <img src="/moños.svg" alt="" />
-                        </button>
-                        <button onClick={() => handleClick(TribalOneElement)}>
-                            <img src="/tribal_1.svg" alt="" />
-                        </button>
-                        <button onClick={() => handleClick(TribalTwoElement)}>
-                            <img src="/tribal_2.svg" alt="" />
-                        </button>
+                        {elements.map(el => (
+                            <button key={el.thumbnail} onClick={() => handleClick(el.value)}>
+                                <img src={el.thumbnail} alt="" />
+                            </button>
+                        ))}
                     </div>
                 </div>
             )}
