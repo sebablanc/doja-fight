@@ -6,7 +6,7 @@ import ShortSelectorModal from '../short-selector-modal/short-selector-modal';
 function ShortButton() {
     const short = useContext(ShortContext);
     const [openModal, setOpenModal] = useState(false);
-    const [shortButton, setShortButton] = useState('');
+    const [shortButton, setShortButton] = useState('short_1_adelante.svg');
 
     useEffect(() => {
         setShortButton(`${short.substring(0, short.lastIndexOf('_'))}_adelante.svg` );
